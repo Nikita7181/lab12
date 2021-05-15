@@ -11,6 +11,7 @@
 ![](https://raw.githubusercontent.com/Nikita7181/lab02/master/Screenshots/Screen_4.png)
 
 ### *Homework*
+![Домашняя работа](https://github.com/Nikita7181/Hello_world)
 
 ![](https://raw.githubusercontent.com/Nikita7181/lab02/master/Screenshots/Screen_5.png)
 
