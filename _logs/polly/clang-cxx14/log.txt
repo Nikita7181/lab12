@@ -1,0 +1,36 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/nikita/Nikita7181/workspace/projects/lab07]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/nikita/Nikita7181/workspace/projects/lab07]> "cmake" "--version"
+cmake version 3.20.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `-H.`
+  `-B/home/nikita/Nikita7181/workspace/projects/lab07/_builds/clang-cxx14`
+  `-GUnix Makefiles`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/nikita/Nikita7181/workspace/projects/lab07/tools/polly/clang-cxx14.cmake`
+]
+[/home/nikita/Nikita7181/workspace/projects/lab07]> "cmake" "-H." "-B/home/nikita/Nikita7181/workspace/projects/lab07/_builds/clang-cxx14" "-GUnix Makefiles" "-DCMAKE_TOOLCHAIN_FILE=/home/nikita/Nikita7181/workspace/projects/lab07/tools/polly/clang-cxx14.cmake"
+-- [polly] Used toolchain: clang / c++14 support
+
+clang not found
+
+CMake Error at tools/polly/utilities/polly_fatal_error.cmake:10 (message):
+Call Stack (most recent call first):
+  tools/polly/compiler/clang.cmake:23 (polly_fatal_error)
+  tools/polly/clang-cxx14.cmake:20 (include)
+  /usr/share/cmake-3.20/Modules/CMakeDetermineSystem.cmake:123 (include)
+  CMakeLists.txt:16 (project)
+
+
+-- Configuring incomplete, errors occurred!
+CMake Error: CMake was unable to find a build program corresponding to "Unix Makefiles".  CMAKE_MAKE_PROGRAM is not set.  You probably need to select a different build tool.

@@ -1,0 +1,58 @@
+Execute command: [
+  `which`
+  `cmake`
+]
+[/home/nikita/Nikita7181/workspace/projects/lab07]> "which" "cmake"
+/usr/bin/cmake
+Execute command: [
+  `cmake`
+  `--version`
+]
+[/home/nikita/Nikita7181/workspace/projects/lab07]> "cmake" "--version"
+cmake version 3.20.2
+
+CMake suite maintained and supported by Kitware (kitware.com/cmake).
+Execute command: [
+  `cmake`
+  `-H.`
+  `-B/home/nikita/Nikita7181/workspace/projects/lab07/_builds/default`
+  `-DCMAKE_TOOLCHAIN_FILE=/home/nikita/Nikita7181/workspace/projects/lab07/tools/polly/default.cmake`
+]
+[/home/nikita/Nikita7181/workspace/projects/lab07]> "cmake" "-H." "-B/home/nikita/Nikita7181/workspace/projects/lab07/_builds/default" "-DCMAKE_TOOLCHAIN_FILE=/home/nikita/Nikita7181/workspace/projects/lab07/tools/polly/default.cmake"
+-- [polly] Used toolchain: Default
+-- The C compiler identification is GNU 10.2.0
+-- The CXX compiler identification is GNU 10.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- [hunter] Calculating Toolchain-SHA1
+-- [hunter] Calculating Config-SHA1
+-- [hunter] HUNTER_ROOT: /home/nikita/projects/hunter
+-- [hunter] [ Hunter-ID: xxxxxxx | Toolchain-ID: 020aca2 | Config-ID: 27b3868 ]
+-- [hunter] GTEST_ROOT: /home/nikita/projects/hunter/_Base/xxxxxxx/020aca2/27b3868/Install (ver.: 1.10.0)
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE
+CMake Error at CMakeLists.txt:71 (add_executable):
+  add_executable cannot create target "demo" because another target with the
+  same name already exists.  The existing target is an executable created in
+  source directory "/home/nikita/Nikita7181/workspace/projects/lab07".  See
+  documentation for policy CMP0002 for more details.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/nikita/Nikita7181/workspace/projects/lab07/_builds/default/CMakeFiles/CMakeOutput.log".
+See also "/home/nikita/Nikita7181/workspace/projects/lab07/_builds/default/CMakeFiles/CMakeError.log".
