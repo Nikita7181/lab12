@@ -6,7 +6,6 @@ HunterGate(
     SHA1 "5659b15dc0884d4b03dbd95710e6a1fa0fc3258d"
 )
 
-
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -24,7 +23,6 @@ set(PRINT_VERSION_STRING "v${PRINT_VERSION}")
 
 hunter_add_package(GTest)
 find_package(GTest CONFIG REQUIRED)
-
 
 add_library(print STATIC ${CMAKE_CURRENT_SOURCE_DIR}/sources/print.cpp)
 
@@ -49,7 +47,6 @@ add_executable(demo ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp)
 target_link_libraries(demo print)
 install(TARGETS demo RUNTIME DESTINATION bin)
 
-
 install(TARGETS print
     EXPORT print-config
     ARCHIVE DESTINATION lib
@@ -61,16 +58,10 @@ install(EXPORT print-config DESTINATION cmake)
 
 if(BUILD_TESTS)
   enable_testing()
-  
   file(GLOB ${PROJECT_NAME}_TEST_SOURCES tests/*.cpp)
   add_executable(check ${${PROJECT_NAME}_TEST_SOURCES})
-  target_link_libraries(check ${PROJECT_NAME} GTest::main)
+  target_link_libraries(check ${PROJECT_NAME} GTest::gtest_main)
   add_test(NAME check COMMAND check)
 endif()
-
-add_executable(demo ${CMAKE_CURRENT_SOURCE_DIR}/demo/main.cpp)
-target_link_libraries(demo print)
-install(TARGETS demo RUNTIME DESTINATION bin)
-
 
 include(CPackConfig.cmake)
