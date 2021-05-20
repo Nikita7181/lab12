@@ -65,3 +65,5 @@ if(BUILD_TESTS)
 endif()
 
 include(CPackConfig.cmake)
+/SHA1<CR>
+wc2w<C-V><ESC>
