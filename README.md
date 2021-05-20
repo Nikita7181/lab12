@@ -4,7 +4,7 @@
 
 - Были выплнены следующие команды
 ```
-export GITHUB_USERNAME=Alex1505Gold
+export GITHUB_USERNAME=Nikita7181
 vimtutor ru
 git clone https://github.com/${GITHUB_USERNAME}/lab07 lab12 #В лабораторной 11 не создавался новый репозиторий, поэтому был склонирован 7 репозитрий
 cd lab12
